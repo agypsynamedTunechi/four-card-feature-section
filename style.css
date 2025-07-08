@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* COL0RS */
+  --red-border: hsl(0, 78%, 62%);
+  --cyan-border: hsl(180, 62%, 55%);
+  --orange-border: hsl(34, 97%, 64%);
+  --blue-border: hsl(212, 86%, 64%);
+  --darkgray-text-color: hsl(234, 12%, 34%);
+  --grayishblue-text-color: hsl(229, 6%, 66%);
+  --lightgray-bg-color: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-size: 15px;
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  background-color: var(--lightgray-bg-color);
+  line-height: 1.5;
+}
+
+header {
+  margin: 4em 2em;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 2rem;
+  color: var(--darkgray-text-color);
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.2rem;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--darkgray-text-color);
+}
+
+h1 + h2 {
+  margin-block-end: .5em;
+}
+
+p {
+  font-weight: 400;
+  color: var(--grayishblue-text-color);
+}
+
+h3 + p {
+  margin-block-start: 0.5em;
+  margin-block-end: 2em;
+}
+
+img {
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: 2px 5px 20px rgb(0,0,0,0.1);                    
+  border-radius: 0.4em;
+  margin-bottom: 2em;
+  padding: 2em 1.5em;
+}
+
+.cyan-border {
+  border-top: 4px solid var(--cyan-border);
+}
+
+.red-border {
+  border-top: 4px solid var(--red-border);
+}
+
+.orange-border {
+  border-top: 4px solid var(--orange-border);
+}
+
+.blue-border {
+  border-top: 4px solid var(--blue-border);
+}
+
+@media (min-width: 720px) {
+  body{
+    height: 1vw;
+  }
+
+  header {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 7em;
+  }
+
+  .wrapper {
+    margin: 0;
+    /* padding: 0; */
+    width: 100%;
+    max-width: 500px;
+    /* margin: 0 auto; */
+  }
+
+  .cyan-border {
+    grid-area: one;
+  }
+
+  .red-border {
+    grid-area: two;
+  }
+
+  .orange-border {
+    grid-area: three;
+  }
+
+  .blue-border {
+    grid-area: four;
+  }
+
+  .grid-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      ".. two .."
+      "one two four"
+      "one three four"
+      ".. three ..";
+    gap: 2em;
+  }
+
+}
