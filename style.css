@@ -15,7 +15,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -32,17 +31,17 @@ header {
 
 h1 {
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--darkgray-text-color);
 }
 
-h2{
+/* h2{
   font-size: 2rem;
 }
 
 h3{
   font-size: 1.2rem;
-}
+} */
 
 h2,
 h3 {
@@ -51,11 +50,13 @@ h3 {
 }
 
 h1 + h2 {
-  margin-block-end: .5em;
+  margin-block-end: 0.5em;
 }
 
 p {
   font-weight: 400;
+  max-width: 520px;
+  margin: auto;
   color: var(--grayishblue-text-color);
 }
 
@@ -75,7 +76,7 @@ img {
   margin: 0 auto;
   background: #fff;
   border: 1px solid #fff;
-  box-shadow: 2px 5px 20px rgb(0,0,0,0.1);                    
+  box-shadow: 2px 5px 20px rgb(0, 0, 0, 0.1);
   border-radius: 0.4em;
   margin-bottom: 2em;
   padding: 2em 1.5em;
@@ -98,8 +99,12 @@ img {
 }
 
 @media (min-width: 720px) {
-  body{
-    height: 1vw;
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 
   header {
@@ -138,7 +143,6 @@ img {
     margin-top: 5em;
     margin-bottom: 5em;
 
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -148,5 +152,4 @@ img {
       ".. three ..";
     gap: 2em;
   }
-
 }
