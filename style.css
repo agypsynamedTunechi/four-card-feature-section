@@ -98,7 +98,7 @@ img {
   border-top: 4px solid var(--blue-border);
 }
 
-@media (min-width: 500px){
+@media (min-width: 31.25em){
 .wrapper{
   margin: 0;
   width: 100%;
@@ -136,7 +136,7 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
   h1, h2 {
     font-size: 2rem;
   }
