@@ -76,7 +76,7 @@ img {
   margin: 0 auto;
   background: #fff;
   border: 1px solid #fff;
-  box-shadow: 2px 5px 20px rgb(0, 0, 0, 0.1);
+  box-shadow: 2px 5px 20px rgba(60, 60, 238, 0.233);
   border-radius: 0.4em;
   margin-bottom: 2em;
   padding: 2em 1.5em;
@@ -98,7 +98,45 @@ img {
   border-top: 4px solid var(--blue-border);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 500px){
+.wrapper{
+  margin: 0;
+  width: 100%;
+}
+
+  .cyan-border {
+    grid-area: one;
+  }
+
+  .red-border {
+    grid-area: two;
+  }
+
+  .orange-border {
+    grid-area: three;
+  }
+
+  .blue-border {
+    grid-area: four;
+  }
+  .grid-container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "one two"
+    "three four"
+    ;
+    gap: 2em;
+  }
+
+  footer{
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 1200px) {
   h1, h2 {
     font-size: 2rem;
   }
